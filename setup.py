@@ -6,11 +6,10 @@ from setuptools import setup, find_packages
 with open('README.md') as readme_file:
     readme = readme_file.read()
 
-with open('LICENSE') as license_file:
-    license = license_file.read()
+#with open('LICENSE') as license_file:
+    #license = license_file.read()
 
 requirements = []
-
 test_requirements = []
 
 setup(
