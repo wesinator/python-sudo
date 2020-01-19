@@ -2,11 +2,16 @@
 import subprocess
 
 
-def run_as_sudo(sudo_user, command_str, shell=False, timeout=None):
+def run_as_sudo(sudo_user, cmd_str, shell=False, timeout=None):
     sudo_args = ["sudo", "-u", sudo_user]
-    sudo_cmd_str = ' '.join(sudo_args)
 
+    r = run_cmd(sudo_args + cmd_str.split(), shell=shell, timeout=timeout)
+    return r
+
+
+def run_cmd(cmd_array, shell=False, timeout=None):
     if shell:
-        subprocess.run(sudo_cmd_str + " {}".format(command_str), shell=shell, timeout=timeout)
-    else:
-        subprocess.run(sudo_args + command_str.split(), shell=shell, timeout=timeout)
+        return subprocess.run(" ".join(cmd_array), shell=shell, timeout=timeout)
+
+    # https://docs.python.org/3/library/subprocess.html#subprocess.CompletedProcess
+    return subprocess.run(cmd_array, shell=shell, timeout=timeout)
