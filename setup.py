@@ -16,8 +16,8 @@ test_requirements = []
 setup(
     name='sudo',
     version='0.1.0',
-    description="""Module to run a subprocess command as another user, via sudo
-    (not necessarily superuser/root)""",
+    description="Modular Python to execute any subprocess commands as another user"\
+    "(not necessarily superuser/root)",
     long_description=readme,
     author="wesinator",
     url='https://github.com/wesinator/python-sudo',

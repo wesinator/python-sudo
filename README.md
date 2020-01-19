@@ -1,5 +1,7 @@
 # python-sudo
-Simple function to run subprocess command as another user (calling `sudo -u`)
+Modular Python to execute any subprocess commands as another user (not necessarily superuser/root)
+
+calling `sudo -u`
 
 #### Usage:
 
@@ -7,10 +9,8 @@ This module does not take a user password for security and efficiency reasons (a
 
 Configure the sudoers file to allow running commands as another user (not necessarily the superuser):
 
-##### `sudo visudo`:
+##### [`sudo visudo`](https://serverfault.com/questions/883434/sudo-nopasswd-not-working-on-a-specific-command):
  - `parent_user ALL=(run_user) NOPASSWD: ALL`
-
-https://serverfault.com/questions/883434/sudo-nopasswd-not-working-on-a-specific-command
 
 
 ```python
