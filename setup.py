@@ -6,18 +6,16 @@ from setuptools import setup, find_packages
 with open('README.md') as readme_file:
     readme = readme_file.read()
 
-#with open('LICENSE') as license_file:
-    #license = license_file.read()
-
 requirements = []
 test_requirements = []
 
 setup(
     name='sudo',
-    version='0.1.0',
-    description="Modular Python to execute any subprocess commands as another user"\
+    version='1.0.0',
+    description="Modular Python to execute any subprocess commands as another user "\
     "(not necessarily superuser/root)",
     long_description=readme,
+    long_description_content_type='text/markdown',
     author="wesinator",
     url='https://github.com/wesinator/python-sudo',
     packages=find_packages(exclude=('tests', 'docs')),
@@ -26,7 +24,7 @@ setup(
     keywords='sudo',
     classifiers=[
         'Intended Audience :: Developers',
-        'License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)',
+        'License :: OSI Approved :: Mozilla Public License 2.0 (MPL 2.0)',
         'Natural Language :: English',
         'Programming Language :: Python :: 3',
         'Programming Language :: Python :: 3.5',
